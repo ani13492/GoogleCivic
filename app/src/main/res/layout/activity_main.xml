@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="amg.googlecivic.MainActivity"
+    android:background="@drawable/background"
+    >
+
+    <TextView
+        android:text="Voting Booth 2016"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:id="@+id/textView"
+        android:fontFamily="serif"
+        android:textSize="36sp"
+        android:typeface="serif"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:text="Street:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/street"
+        android:textSize="26sp"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/enterZip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="State:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/state"
+        android:textColor="@android:color/background_light"
+        android:textSize="26sp"
+        android:layout_marginTop="15sp"
+        android:layout_below="@+id/city"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="City:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/city"
+        android:textColor="@android:color/background_light"
+        android:textSize="26sp"
+        android:layout_below="@+id/street"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/background_dark"
+        android:textSize="26sp"
+        android:ems="10"
+        android:layout_above="@+id/city"
+        android:layout_alignLeft="@+id/enterZip"
+        android:layout_alignStart="@+id/enterZip"
+        android:id="@+id/streetName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/background_dark"
+        android:textSize="26sp"
+        android:ems="10"
+        android:layout_alignTop="@+id/city"
+        android:layout_alignLeft="@+id/streetName"
+        android:layout_alignStart="@+id/streetName"
+        android:id="@+id/cityName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/background_dark"
+        android:textSize="26sp"
+        android:ems="10"
+        android:layout_below="@+id/cityName"
+        android:layout_alignLeft="@+id/cityName"
+        android:layout_alignStart="@+id/cityName"
+        android:layout_marginTop="15sp"
+        android:maxLength="2"
+        android:id="@+id/stateName" />
+
+    <Button
+        android:text="GET LOCATION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zipButton"
+        android:textSize="24sp"
+        android:onClick="getInfo"
+        android:layout_below="@+id/stateName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:elevation="0dp" />
+
+    <TextView
+        android:text="Enter Address:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enterZip"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="71dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cityName"
+        android:layout_alignRight="@+id/zipButton"
+        android:layout_alignEnd="@+id/zipButton"
+        android:layout_marginRight="49dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginTop="6dp"
+        android:id="@+id/progressBar3"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
