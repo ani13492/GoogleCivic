@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
 
-                URL url = new URL("https://www.googleapis.com/civicinfo/v2/voterinfo?key="+key+"&address="+address[0]+"&electionId=5000");
+                URL url = new URL("https://www.googleapis.com/civicinfo/v2/voterinfo?key="+key+"&address="+address[0]+"&electionId=2000");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 
                 try {
